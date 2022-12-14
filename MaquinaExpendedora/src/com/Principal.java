@@ -1,33 +1,25 @@
 package com;
 
+import java.util.HashMap;
+
 public class Principal {
-	
+
 	public static void main(String[] args) {
 		
-		//Creacion de productos individualmente
-		Producto p1 = new Producto("A1","Emperador", "Paquete 8 unidades", 18.0);
-		Producto p2 = new Producto("A2","Cacahuates", "Bolsa 60 grs", 20.0);
-		Producto p3 = new Producto("A3","Paleta", "Unidad", 10.0);
-		Producto p4 = new Producto("A4","Gansito", "Paquete 70 grs", 14.0);
-		Producto p5 = new Producto("A5","Chicles", "Paquete 20 unidades", 15.0);
 		
-		//Inicializacion del array
-		Producto[] productos = new Producto[5];
-
+		HashMap <String,Producto> productos = new HashMap <String,Producto>();
 		
-		//Añade los productos al array
-		productos[0] = p1;
-		productos[1] = p2;
-		productos[2] = p3;
-		productos[3] = p4;
-		productos[4] = p5;
-		
-		MaquinaExpendedora m1 = new MaquinaExpendedora("Negro", "F1", 140.0, productos, 0);
+		productos.put("0001", new Producto("Cheeto", "0001", 14.5,8));
+		productos.put("0002", new Producto("Sabritas", "0002", 18.0,4));
+		productos.put("0003", new Producto("Boing", "0003", 10.0,3));
+		productos.put("0004", new Producto("Pepsi", "0004", 16.5,5));
+		productos.put("0005", new Producto("Emperador", "0005", 20.0,1));
 		
 		
-		m1.venderProducto();
+		Maquina maquina1 = new Maquina(0001, productos);
 		
-		System.out.println(m1);
+		System.out.println(maquina1.buscarproducto("0001"));
+		maquina1.Comprar("0001");
 		
 	}
 

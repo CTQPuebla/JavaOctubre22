@@ -2,57 +2,104 @@ package com;
 
 public class Producto {
 	
-	String nombre;
-	String presentacion;
-	String codigo;
-	double precio;
+	private String nombredelproducto;
+	private String codigodeid;
+	private double precio;
+	private int existencia;
 	
-	public Producto(String codigo,String nombre, String presentacion, double precio) {
-		this.codigo = codigo;
-		this.nombre = nombre;
-		this.presentacion = presentacion;
+	
+	public Producto () {
+		
+	}
+
+
+	
+
+
+	public Producto(String nombredelproducto, String codigodeid, double precio, int existencia) {
+		super();
+		this.nombredelproducto = nombredelproducto;
+		this.codigodeid = codigodeid;
 		this.precio = precio;
+		this.existencia = existencia;
 	}
 
-	public String getNombre() {
-		return nombre;
+
+
+
+
+	public String getNombredelproducto() {
+		return nombredelproducto;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+
+
+
+
+	public void setNombredelproducto(String nombredelproducto) {
+		this.nombredelproducto = nombredelproducto;
 	}
 
-	public String getPresentacion() {
-		return presentacion;
+
+
+
+
+	public String getCodigodeid() {
+		return codigodeid;
 	}
 
-	public void setPresentacion(String presentacion) {
-		this.presentacion = presentacion;
+
+
+
+
+	public void setCodigodeid(String codigodeid) {
+		this.codigodeid = codigodeid;
 	}
+
+
+
+
 
 	public double getPrecio() {
 		return precio;
 	}
 
+
+
+
+
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
-	
-	
 
-	public String getCodigo() {
-		return codigo;
+
+
+
+
+	public int getExistencia() {
+		return existencia;
 	}
 
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
+
+
+
+
+	public void setExistencia(int existencia) {
+		this.existencia = existencia;
 	}
+
+
+
+
 
 	@Override
 	public String toString() {
-		return "Producto [nombre=" + nombre + ", presentacion=" + presentacion + ", codigo=" + codigo + ", precio="
-				+ precio + "]";
+		return "Producto [nombredelproducto=" + nombredelproducto + ", codigodeid=" + codigodeid + ", precio=" + precio
+				+ ", existencia=" + existencia + "]";
 	}
+
+
+
 	
-	
+
 }
